@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+/* Required for full background image */
+
+html,
+body,
+.view {
+  min-height: 100vh !important;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: white !important;
+}
+
+.navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: white;
+  &:hover {
+    color: darkgrey;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width .3s;
+    margin: auto;
+  }
+  &:hover::after {
+    width: 90%;
+  }
+}
+
+.navbar.navbar-light.top-nav-collapse .breadcrumb .nav-item .nav-link, .navbar.navbar-light.top-nav-collapse .navbar-nav .nav-item .nav-link {
+  color: black;
+  &:hover {
+    color: darkgrey;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: black;
+    transition: width .3s;
+    margin: auto;
+  }
+  &:hover::after {
+    width: 90%;
+  }
+}
+
+.navbar:not(.top-nav-collapse) {
+  background-color: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: white !important;
+  }
+  .navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: black !important;
+    text-align: left;
+    &:hover {
+      color: darkgrey;
+    }
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+footer {
+  bottom: 0;
+}
